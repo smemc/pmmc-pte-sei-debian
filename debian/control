@@ -1,0 +1,96 @@
+Source: sei
+Section: contrib/games
+Priority: extra
+Maintainer: Laércio de Sousa <lbsousajr@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), lsb-release, librsvg2-bin, unzip, wget
+Standards-Version: 3.9.3
+Homepage: http://www.orientadores.pmmc.com.br/cae/sei
+Vcs-Git: git://github.com/oiteam/pmmc-pte-sei-debian.git
+Vcs-Browser: https://github.com/oiteam/pmmc-pte-sei-debian.git
+
+Package: sei-installer
+Architecture: all
+Section: contrib/oldlibs
+Depends: ${misc:Depends}, sei (= ${binary:Version})
+Description: Transitional package to sei
+ This is just a dummy transitional package to new sei.
+ It can be safely removed after sei is installed.
+
+Package: sei-data-installer
+Architecture: all
+Section: contrib/oldlibs
+Depends: ${misc:Depends}, sei-data (= ${binary:Version})
+Description: Transitional package to sei-data
+ This is just a dummy transitional package to new sei-data-installer.
+ It can be safely removed after sei-data-installer is installed.
+
+Package: sei-doc-installer
+Architecture: all
+Section: contrib/oldlibs
+Depends: ${misc:Depends}, sei-doc (= ${binary:Version})
+Description: Transitional package to sei-doc
+ This is just a dummy transitional package to new sei-doc.
+ It can be safely removed after sei-doc is installed.
+
+Package: sei
+Architecture: all
+Depends: ${misc:Depends}, sei-client, sei-data (= ${binary:Version}), sei-doc (= ${binary:Version})
+Conflicts: sei-installer (<< ${binary:Version})
+Replaces: sei-installer (<< ${binary:Version})
+Provides: sei-installer
+Description: Metapackage for SEI standalone downloader/installer
+ This simple metapackage installs all necessary components of SEI
+ for standalone use.
+
+Package: sei-data
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: sei-data-installer (<< ${binary:Version}), sei (<< ${binary:Version})
+Replaces: sei-data-installer (<< ${binary:Version})
+Provides: sei-data-installer
+Description: Data files for SEI
+ This package installs the SEI data.
+ SEI (Software de Educação Infantil)
+ is a set of games for preschool education, as part of the Educational
+ Technology Program of Mogi das Cruzes, SP, Brazil.
+ .
+ WARNING: Installing this Ubuntu package causes the SEI tarball to
+ be downloaded from the "Orientadores de Informática" web site.
+ The distribution license of SEI is available at
+ www.orientadores.pmmc.com.br/cae/sei. Installing this Ubuntu package implies
+ that you have accepted the terms of that license.
+
+Package: sei-doc
+Architecture: all
+Section: contrib/doc
+Depends: ${misc:Depends}
+Recommends: xdg-utils
+Conflicts: sei-doc-installer (<< ${binary:Version}), sei (<< ${binary:Version})
+Replaces: sei-doc-installer (<< ${binary:Version})
+Provides: sei-doc-installer
+Description: Documentation for SEI
+ This package installs the SEI documentation.
+ SEI (Software de Educação Infantil) is a set of games for preschool
+ education, as part of the Educational Technology Program of Mogi das Cruzes,
+ SP, Brazil.
+ .
+ WARNING: Installing this Ubuntu package causes the SEI tarball to
+ be downloaded from the "Orientadores de Informática" web site.
+ The distribution license of SEI is available at
+ www.orientadores.pmmc.com.br/cae/sei. Installing this Ubuntu package implies
+ that you have accepted the terms of that license.
+
+Package: sei-client-minimal
+Architecture: all
+Depends: ${misc:Depends}, pmmc-pte-flashplayer, sei-data
+Provides: sei-client
+Description: Minimal launcher for SEI
+ This package install a minimal script to launch SEI from a local installation.
+
+Package: sei-server
+Architecture: all
+Depends: ${misc:Depends}, apache2, sei-data
+Recommends: sei-doc
+Suggests: sei-client
+Description: SEI web server
+ This metapackage makes a SEI installation available in a web server.
