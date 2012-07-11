@@ -1,5 +1,6 @@
-sei (2.12.1.1oi3-1~aptiso0) unstable; urgency=low
+sei (2.12.1.1oi3-1~aptiso1) unstable; urgency=low
 
   * Initial release.
+  * [71a9e24] Imported Upstream version 2.12.1.1oi3
 
- -- Laércio de Sousa <lbsousajr@gmail.com>  Tue, 10 Jul 2012 15:18:36 -0300
+ -- Laércio de Sousa <lbsousajr@gmail.com>  Tue, 10 Jul 2012 16:39:58 -0300
