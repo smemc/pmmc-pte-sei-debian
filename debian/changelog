@@ -1,3 +1,9 @@
+sei (2.12.1.2-1~aptiso1) unstable; urgency=low
+
+  * [6df572b] Imported Upstream version 2.12.1.2
+
+ -- Laércio de Sousa <lbsousajr@gmail.com>  Wed, 01 Aug 2012 10:10:35 -0300
+
 sei (2.12.1.1oi3-1~aptiso1) unstable; urgency=low
 
   * Initial release.
