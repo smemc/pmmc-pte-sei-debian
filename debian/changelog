@@ -1,8 +1,9 @@
-sei (2.12.2.2-1) unstable; urgency=low
+sei (2.12.2.3-1) unstable; urgency=low
 
   * [d90ca82] Imported Upstream version 2.12.2.2
+  * [ad6d66a] Imported Upstream version 2.12.2.3
 
- -- Laércio de Sousa <lbsousajr@gmail.com>  Wed, 24 Oct 2012 10:22:57 -0200
+ -- Laércio de Sousa <lbsousajr@gmail.com>  Tue, 06 Nov 2012 08:22:50 -0200
 
 sei (2.12.2.1-1~aptiso1) unstable; urgency=low
 
